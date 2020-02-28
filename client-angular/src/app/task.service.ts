@@ -14,7 +14,7 @@ export class TaskService {
   //apiUrl: string = "http://localhost:5000/api/tasks";
 
   // Express will use port 3000
-  //apiUrl: string = "http://localhost:3000/tasks";
+  apiUrl: string = "http://localhost:3000/tasks";
 
   constructor(private http: HttpClient) {}
 
