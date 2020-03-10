@@ -4,10 +4,10 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { TaskDisplayComponent } from "./task-display/task-display.component";
+import { BidDisplayComponent } from "./bid-display/bid-display.component";
 
 @NgModule({
-  declarations: [AppComponent, TaskDisplayComponent],
+  declarations: [AppComponent, BidDisplayComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
