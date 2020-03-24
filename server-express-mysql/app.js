@@ -5,7 +5,7 @@ var logger = require("morgan");
 var models = require("./models");
 var cors = require("cors");
 
-var tasksRouter = require("./routes/tasks");
+var bidsRouter = require("./routes/bids");
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
-app.use("/tasks", tasksRouter);
+app.use("/bids", bidsRouter);
 
 models.sequelize.sync().then(function() {
   console.log("DB Sync'd up");
