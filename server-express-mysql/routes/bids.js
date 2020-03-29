@@ -26,7 +26,7 @@ router.put("/:id", function(req, res, next) {
   models.Bid.update(
     {
       contactFirstName: req.body.contactFirstName,
-      contactLastName: req.body.contactFirstName,
+      contactLastName: req.body.contactLastName,
       jobDescription: req.body.jobDescription,
       dateOfOriginalBid: req.body.dateOfOriginalBid,
       amountOfOriginalBid: req.body.amountOfOriginalBid,
