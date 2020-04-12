@@ -1,6 +1,15 @@
-var express = require("express");
+const express = require("express");
 var router = express.Router();
+const mysql = require('mysql2');
 var models = require("../models");
+
+
+
+router.get('/bids', function( req, res, next ){
+  res.send(JSON.stringify(
+    models.index
+  ));
+});
 
 router.get("/", function(req, res, next) {
   models.Bid.findAll().then(bids => res.json(bids));
