@@ -7,7 +7,7 @@ var models = require("../models");
 
 router.get('/bids', function( req, res, next ){
   res.send(JSON.stringify(
-    models.index
+    models.bids
   ));
 });
 
@@ -16,7 +16,7 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/", function(req, res, next) {
-  let newBids = new models.Bid();
+  let newBid = new models.Bid();
   newBid.contactFirstName = req.body.contactFirstName;
   //going add the other inputs, think they are needed here -SGar
   newBid.contactLastName = req.body.contactLastName;
