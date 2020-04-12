@@ -5,7 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var models = require('./models'); 
 
+var bidsRouter = require("./routes/index");
 
+
+app.use("/bids", bidsRouter);
 
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
