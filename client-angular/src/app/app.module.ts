@@ -4,11 +4,13 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { TaskDisplayComponent } from "./task-display/task-display.component";
+import { BidDisplayComponent } from "./bid-display/bid-display.component";
+import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [AppComponent, TaskDisplayComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, BidDisplayComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, AuthModule, SharedModule,],
   providers: [],
   bootstrap: [AppComponent]
 })
