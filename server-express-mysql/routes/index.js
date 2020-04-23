@@ -1,13 +1,22 @@
-var express = require("express");
+const express = require("express");
 var router = express.Router();
+const mysql = require('mysql2');
 var models = require("../models");
+
+
+
+router.get('/bids', function( req, res, next ){
+  res.send(JSON.stringify(
+    models.bids
+  ));
+});
 
 router.get("/", function(req, res, next) {
   models.Bid.findAll().then(bids => res.json(bids));
 });
 
 router.post("/", function(req, res, next) {
-  let newBids = new models.Bid();
+  let newBid = new models.Bid();
   newBid.contactFirstName = req.body.contactFirstName;
   //going add the other inputs, think they are needed here -SGar
   newBid.contactLastName = req.body.contactLastName;

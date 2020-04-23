@@ -13,8 +13,8 @@ import {RouterModule} from '@angular/router';
     RouterModule
 
   ],
-  export:[ ColumnOneComponent
-
+  exports:[ ColumnOneComponent
+//typo i think was red error for export so switched to exports-SGar
   ]
 })
 export class SharedModule { }
