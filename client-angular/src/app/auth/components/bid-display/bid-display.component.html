@@ -1,10 +1,26 @@
 <h3>Bids Tracker 5000</h3>
-<input [(ngModel)]="newBid.contactFirstName" placeholder="First Name" /><button (click)="addBid()">Start A New Bid</button>
-<ul>
-  <li *ngFor="let bid of bids">
-    {{ bid.id }} : {{ bid.contactFirstName }} : {{ bid.contactLastName }} :
-    {{ bid.jobDescription }} : {{ bid.dateOfOriginalBid }} : {{ bid.amountOfOriginalBid }}
-    : {{ bid.address }} : {{ bid.city }} :
-    {{ bid.isDeleted ? "deleted" : "not deleted" }} <!--this i dont think should be included here but i just converted the completed not completed for the deleted, it may be perfect though completed not completed is good for a bid-->
-  </li>
-</ul>
+
+<input [(ngModel)]="newBid.contactFirstName" placeholder="First Name" />
+<button (click)="addBid()">Start A New Bid</button>
+<table align="center">
+  <thead>
+    <th>Bid Id #</th>
+    <th>Contact Name</th>
+    <th>Job Description</th>
+    <th>Initial Date of Bid</th>
+    <th>Bid Amount</th>
+    <th>Address</th>
+    <th>City</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bid of bids">
+      <td>{{ bid.id }}</td>
+      <td>{{ bid.contactFirstName }} {{ bid.contactLastName }}</td>
+      <td>{{ bid.jobDescription }}</td>
+      <td>{{ bid.dateOfOriginalBid }}</td>
+      <td>{{ bid.amountOfOriginalBid }}</td>
+      <td>{{ bid.address }}</td>
+      <td>{{ bid.city }}</td>
+    </tr>
+  </tbody>
+</table>
