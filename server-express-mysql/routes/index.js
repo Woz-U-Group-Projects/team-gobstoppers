@@ -5,11 +5,11 @@ var models = require("../models");
 
 
 
-router.get('/bids', function( req, res, next ){
-  res.send(JSON.stringify(
-    models.bids
-  ));
-});
+// router.get('/bids', function( req, res, next ){
+//   res.send(JSON.stringify(
+//     models.bids
+//   ));
+// });
 
 router.get("/", function(req, res, next) {
   models.Bid.findAll().then(bids => res.json(bids));
