@@ -6,3 +6,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+form { 
+    border: #333, solid;
+    
+}
+div {
+    padding-bottom: 3px
+}
