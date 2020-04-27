@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { BidService } from "../bid.service";
-import { Bid } from "../models/bid";
+import { BidService } from "../../../bid.service";
+import { Bid } from "../../../models/bid";
 
 @Component({
   selector: "app-bid-display",

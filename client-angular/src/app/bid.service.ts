@@ -14,7 +14,7 @@ export class BidService {
   //apiUrl: string = "http://localhost:5000/api/tasks";
 
   // Express will use port 3000
-  apiUrl: string = "http://localhost:3000/bids";
+  apiUrl: string = "http://localhost:3001/bids";
 
   constructor(private http: HttpClient) {}
 

@@ -1,0 +1,27 @@
+
+
+    <div class="col-md-12 form-margin">
+       
+        <h3>Login</h3>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" name="username" ngModel required #username="ngModel" class="form-control"
+                    id="loginUsername" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" name="password" ngModel required #password="ngModel" class="form-control"
+                    id="loginPassword" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+                <a [routerLink]="['/reset-password']">Forgot Password</a>
+            </div>
+            <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Login <i
+                    class="fas fa-sign-in-alt"></i></button>
+        </form>
+    </div>
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "Password1!",
-    "database": "sakila",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "admin",
+    "password": "SySdom111",
+    "database": "bids",
+    "host": "bidrecords.c5c1nnkpng19.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "define": { "timestamps" : false }
   },
   "test": {
     "username": "root",

@@ -1,0 +1,51 @@
+
+<div class="col-md-12">
+  <div class="form">
+  <div>
+  <input [(ngModel)]="newBid.contactFirstName" placeholder="First Name" />
+  <input [(ngModel)]="newBid.contactLastName" placeholder="Last Name" />
+  </div>
+  <div>
+  <input [(ngModel)]="newBid.contactjobDescription" placeholder="Bid Description" />
+  </div>
+  <div>
+  <input [(ngModel)]="newBid.contactdateOfOriginalBid" placeholder="originally bid date" />
+  <input [(ngModel)]="newBid.amountOfOriginalBid" placeholder="Bid total $" />
+  </div>
+  <div>
+  <input [(ngModel)]="newBid.contactaddress" placeholder="location street address" />
+  <h5>Please Check Bid information Before Submiting</h5>
+  <button (click)="addBid()">Submit New Bid</button>
+  </div>
+  </div>
+</div>
+
+  <div class="col-md-12">
+    <table align="center">
+      <thead>
+        <th>Bid Id #</th>
+        <th>Contact Name</th>
+        <th>Job Description</th>
+        <th>Initial Date of Bid</th>
+        <th>Bid Amount</th>
+        <th>Address</th>
+    
+      </thead>
+      <tbody>
+        <tr *ngFor="let bid of bids">
+          <td>{{ bid.id }}</td>
+          <td>{{ bid.contactFirstName }} {{ bid.contactLastName }}</td>
+          <td>{{ bid.jobDescription }}</td>
+          <td>{{ bid.dateOfOriginalBid }}</td>
+          <td>{{ bid.amountOfOriginalBid }}</td>
+          <td>{{ bid.address }}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
