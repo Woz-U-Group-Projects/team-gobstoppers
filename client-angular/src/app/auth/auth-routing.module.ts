@@ -7,7 +7,7 @@ import { BidDisplayComponent } from './components/bid-display/bid-display.compon
 
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path:'register', component: RegisterComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
   {path: 'bids', component: BidDisplayComponent}
