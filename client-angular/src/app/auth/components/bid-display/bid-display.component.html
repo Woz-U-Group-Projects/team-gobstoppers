@@ -7,7 +7,7 @@
 <input [(ngModel)]="newBid.contactdateOfOriginalBid" placeholder="originally bid date" />
 <input [(ngModel)]="newBid.amountOfOriginalBid" placeholder="Bid total $" />
 <input [(ngModel)]="newBid.contactaddress" placeholder="location street address" />
-<input [(ngModel)]="newBid.contactcity" placeholder="city" />
+
 <h3>Please Check Bid information Before Submiting</h3>
 <button (click)="addBid()">Submit New Bid</button>
 
@@ -19,7 +19,7 @@
     <th>Initial Date of Bid</th>
     <th>Bid Amount</th>
     <th>Address</th>
-    <th>City</th>
+
   </thead>
   <tbody>
     <tr *ngFor="let bid of bids">
@@ -29,7 +29,7 @@
       <td>{{ bid.dateOfOriginalBid }}</td>
       <td>{{ bid.amountOfOriginalBid }}</td>
       <td>{{ bid.address }}</td>
-      <td>{{ bid.city }}</td>
+      
     </tr>
   </tbody>
 </table>
