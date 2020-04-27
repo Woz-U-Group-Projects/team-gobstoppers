@@ -1,0 +1,18 @@
+ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+ul li  a{
+  color: black !important;
+}
+.form-margin {
+  margin-left: 60%;
+}
+.drop{
+  margin-top: 25px;
+}
+
+.double-drop{
+  margin-top: 50px;
+}
