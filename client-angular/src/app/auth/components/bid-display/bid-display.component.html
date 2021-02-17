@@ -1,0 +1,22 @@
+<div class="jumbotron" style="background-color:coral; height: calc(95vh);">
+  <h1 style="color:#c5e7e4fb; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; padding: 4px;">
+    SealCoating Bid Tracker</h1>
+  <input [(ngModel)]="newBid.contactFirstName" placeholder="First Name" /><button (click)="addBid()">Start A New
+    Bid</button>
+  <ul>
+    <li *ngFor="let bid of bids">
+      {{ bid.id }} : {{ bid.contactFirstName }} : {{ bid.contactLastName }} :
+      {{ bid.jobDescription }} : {{ bid.dateOfOriginalBid }} : {{ bid.amountOfOriginalBid }}
+      : {{ bid.address }} : {{ bid.city }} :
+      {{ bid.isDeleted ? "deleted" : "not deleted" }}
+      <!--this i dont think should be included here but i just converted the completed not completed for the deleted, it may be perfect though completed not completed is good for a bid-->
+    </li>
+  </ul>
+  <!--Jumbotron! I sure hope it works-->
+
+
+  <p class="lead">
+    Providing excellent service for all of your coating needs.
+  </p>
+  <a class="btn btn-lg btn-primary" href="https://youtu.be/b3ZDXPnlOiE" role="button">View tutorial</a>
+</div>
